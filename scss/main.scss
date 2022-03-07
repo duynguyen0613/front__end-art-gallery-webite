@@ -54,6 +54,7 @@ $line-height--body: 3.2rem;
 }
 
 
+
 // 
 html {
     font-size: 62.5%;
@@ -94,6 +95,7 @@ body > * {
 .header__link {
     padding: 2rem 2rem;
     max-height: 70px;
+    min-width: 200px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -153,6 +155,8 @@ body > * {
     grid-row: 2;
 }
 
+
+
 .gallery__content:last-of-type {
     padding: 2.5rem;
     @include dark-background;
@@ -166,12 +170,76 @@ body > * {
     }
 }
 
+.location {
+    margin-bottom: 0rem;
+    position: relative;
+
+    & .header__link {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: red;
+
+        & .btn--location {
+            flex-basis: 100%;
+            order: 2;
+        }
+        
+        & img {
+            flex-basis: 20%;
+            order: 1;
+        }
+    }
+
+
+
+}
+
+
+.address {
+    background: $color-dark;
+    color: #fff;
+    padding: 2rem;
+    margin-bottom: 0rem;
+
+    & .address--title {
+        text-transform: uppercase;
+        margin: 1rem 0;
+    }
+
+    & .address--subtitle {
+        text-transform: uppercase;
+        color: $color-accent;
+        margin: 1rem 0;
+    }
+
+    & .address--text {
+        margin: 1rem 0;
+        color: #fff;
+        font-weight: $font-weight--1;
+
+        span {
+            display: block;
+        }
+    }
+
+    & .address--content {
+        font-weight: $font-weight--1;
+        color: #fff;
+    }
+
+}
+
 .footer {
     background-color: $color-dark;
     color: #fff;
     padding: 4rem;
     margin-bottom: 0rem;
 }
+
+
 
 .footer > * {
     margin-bottom: 1rem;
@@ -184,9 +252,10 @@ body > * {
 
 }
 .footer--text {
-    font-size: 1.9rem;
+    font-size: 2rem;
     font-weight: $font-weight--1;
     color: #fff;
+    margin: 4rem 0;
 }
 
 .footer__social-links {
@@ -198,3 +267,14 @@ body > * {
     }
 }
 
+.bg-accent {
+    background: $color-accent;
+    color: $color-dark ;
+    & img {
+        fill: #333;
+    }
+
+    & .footer--title, & .footer--text {
+        color: $color-dark;
+    }
+}
