@@ -78,7 +78,7 @@ body > * {
   background: #d5966c;
   flex-grow: 0;
   flex-shrink: 1;
-  flex-basis: 10%; }
+  flex-basis: 1%; }
 
 .gallery {
   padding: 2rem;
