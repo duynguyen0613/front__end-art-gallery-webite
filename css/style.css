@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.text {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: #444444; }
+
+.title {
+  line-height: 6rem;
+  font-size: 4rem;
+  letter-spacing: 2px; }
+
+.btn {
+  padding: 1.4rem 2rem;
+  text-transform: uppercase;
+  background: #151515;
+  color: #ffffff;
+  font-size: 2rem; }
+
+html {
+  font-size: 62.5%; }
+
+a {
+  color: #333;
+  text-decoration: none;
+  font-size: 2rem;
+  text-transform: uppercase; }
+
+img {
+  width: 100%;
+  object-fit: cover; }
+
+body {
+  font-size: 1.8rem;
+  font-family: "Big Shoulders Display", sans-serif; }
+
+body > * {
+  margin-bottom: 6rem; }
+
+.header--title {
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 6rem;
+  padding: 2rem 2rem; }
+
+.header--text {
+  padding: 2rem 2rem; }
+
+.header__link {
+  padding: 2rem 2rem;
+  max-height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center; }
+
+.btn--location {
+  height: 70px;
+  max-width: 150px;
+  min-width: 90px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 45%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+
+.header__link img {
+  height: 70px;
+  width: min-content;
+  padding: 2rem;
+  text-align: left;
+  background: #d5966c;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 10%; }
+
+.gallery {
+  padding: 2rem;
+  display: grid;
+  grid-auto-columns: auto; }
+
+.gallery > * {
+  margin-bottom: 1rem; }
+
+.gallery--title {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.3;
+  text-transform: uppercase; }
+
+.gallery--text {
+  font-weight: 300;
+  margin: 1rem 0; }
+
+.gallery__content--1 {
+  grid-row: 2; }
+
+.gallery__content:last-of-type {
+  padding: 2.5rem;
+  background-color: #151515;
+  color: #ffffff; }
+  .gallery__content:last-of-type .gallery--text {
+    color: #ffffff;
+    font-weight: 300; }
+
+.footer {
+  background-color: #151515;
+  color: #fff;
+  padding: 4rem;
+  margin-bottom: 0rem; }
+
+.footer > * {
+  margin-bottom: 1rem; }
+
+.footer--title {
+  font-size: 2rem;
+  line-height: 1.4; }
+
+.footer--text {
+  font-size: 1.9rem;
+  font-weight: 300;
+  color: #fff; }
+
+.footer__social-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .footer__social-links span {
+    margin-right: 1.6rem; }

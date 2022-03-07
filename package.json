@@ -1,0 +1,24 @@
+{
+  "name": "front__end-art-gallery-webite",
+  "version": "1.0.0",
+  "description": "![Design preview for the Art gallery website coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/main.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duynguyen0613/front__end-art-gallery-webite.git"
+  },
+  "author": "Duy Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duynguyen0613/front__end-art-gallery-webite/issues"
+  },
+  "homepage": "https://github.com/duynguyen0613/front__end-art-gallery-webite#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}
