@@ -244,7 +244,7 @@ body > * {
     .header__image-box--location p {
       height: 100%; } }
 
-@media (min-width: 850px) {
+@media (min-width: 967px) {
   .location .header__image-box--location {
     height: 100vh; }
   .address {
@@ -286,7 +286,7 @@ body > * {
       line-height: 1.6;
       font-weight: 400; } }
 
-@media (min-width: 852px) {
+@media (min-width: 968px) {
   body {
     background: red; }
   .header {
