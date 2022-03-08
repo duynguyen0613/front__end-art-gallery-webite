@@ -32,6 +32,8 @@ $line-height--body: 3.2rem;
 // 
 
 
+
+
 // ultility classes
 .text {
     font-size: $font-size__text;
@@ -66,9 +68,21 @@ a {
     font-size: 2rem;
     text-transform: uppercase;
 }
+p {
+    & picture {
+        height: 100%;
+        width: 100%;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
 
 img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -131,6 +145,8 @@ body > * {
     padding: 2rem ;
     display: grid;
     grid-auto-columns: auto;
+    max-width: 1100px;
+    margin: 0 auto;
 
 }
 
@@ -180,20 +196,16 @@ body > * {
         position: absolute;
         top: 0;
         left: 0;
-        background: red;
 
         & .btn--location {
             flex-basis: 100%;
             order: 2;
         }
-        
         & img {
             flex-basis: 20%;
             order: 1;
         }
     }
-
-
 
 }
 
@@ -276,5 +288,178 @@ body > * {
 
     & .footer--title, & .footer--text {
         color: $color-dark;
+    }
+}
+
+
+@media (max-width: 550px) {
+    body {
+        & > * {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        & footer {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (min-width: 550px)
+{
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4rem auto 1rem auto 1rem auto 4rem;
+
+        & .header__image-box {
+            grid-row: 1 / -1 ;
+            grid-column: 1;
+            min-width: calc(100% + 60px);
+
+            & p  {
+                height: 100%;
+            }
+
+            & img {
+                min-height: 100%;
+            }
+
+        }
+
+        & .header--title {
+            grid-row: 2;
+            grid-column: 2;
+        }
+
+        & .header--text {
+            grid-row: 4;
+            grid-column: 2;
+        }
+
+        & .header__link {
+            grid-row: 6;
+            grid-column: 2;
+        }
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: auto auto minmax(250px, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 1rem;
+
+        & .gallery__img-box {
+            & p {
+                height: 100%;
+            }
+        }
+
+        & .gallery__content--1 {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        & .gallery__content--2 {
+            grid-column: -2;
+            grid-row: 3;
+        }
+
+
+        & .gallery__img-box--1 {
+            grid-column: 2 / -1 ;
+            grid-row: 1;
+        }
+
+        & .gallery__img-box--2 {
+            grid-column: 1 / 3;
+            grid-row: 2 / -1;
+        }
+    };
+    
+    .header__image-box--location {
+        height: 400px;
+
+        & p {
+            height: 100%;
+        }
+
+    }
+}
+
+@media (min-width: 850px)
+{
+    .location {
+
+        & .header__image-box--location
+        {
+            height: 100vh;
+        }
+    }
+
+    .address {
+        display: grid;
+        grid-template-columns: 3rem 1fr 1em 1fr 3rem;
+        grid-auto-rows: auto;
+
+        & .address--title {
+            grid-row: 2;
+            grid-column: 2;
+            font-size: 6rem;
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(100% - 20px);
+        }
+
+        & .address--subtitle {
+            grid-column: 4;
+            grid-row: 2;
+        }
+
+        & .address--text {
+            grid-column: 4;
+            grid-row: 3;
+        }
+
+        & .address--content {
+            grid-column: 4;
+            grid-row: 4;
+            max-width: 480px;
+            line-height: 1.6;
+        }
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        & .footer--title {
+
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 150px;
+            font-size: 3rem;
+            font-weight: $font-weight--5;
+            line-height: 1.1;
+        }
+
+        & .footer--text{
+            max-width: 320px;
+            font-size: 2.4rem;
+            line-height: 1.6;
+            font-weight: $font-weight--2;
+        }
+    }
+}
+
+@media (min-width: 852px)
+{
+    body {
+        background: red;
+    }
+
+    .header {
+        background: green;
     }
 }
